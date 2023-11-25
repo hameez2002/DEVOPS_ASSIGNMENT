@@ -70,5 +70,33 @@ function filterProjects() {
     });
 }
 
+// Sample certifications data
+const certifications = [
+    "Beginning C++ Programming - From Beginner to Beyond",
+    "The Complete 2021 Flutter Development Bootcamp with Dart",
+    "Logo Design Mastery In Adobe Illustrator",
+    "Python For Beginners to Advance",
+    "PHP for Beginners 2023: The Complete PHP MySQL PDO Course",
+];
+
+// Function to populate the certifications list
+function populateCertifications() {
+    const certificatesList = document.getElementById('certificatesList');
+
+    // Clear existing certifications
+    certificatesList.innerHTML = '';
+
+    // Populate the certifications list
+    certifications.forEach(certification => {
+        const listItem = document.createElement('li');
+        listItem.textContent = certification;
+        certificatesList.appendChild(listItem);
+    });
+}
+
+// Initial certifications display
+populateCertifications();
+
+
 // Initial projects display
 filterProjects();
